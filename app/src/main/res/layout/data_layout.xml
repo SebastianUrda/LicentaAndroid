@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Date:" />
+
+    <TextView
+        android:id="@+id/latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Latitude: " />
+
+    <TextView
+        android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latitudeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Longitude: " />
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitudeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Temperature: " />
+
+    <TextView
+        android:id="@+id/tempLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co2Label"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Temperature: " />
+
+    <TextView
+        android:id="@+id/humidityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempLabel2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Humidity: " />
+
+    <TextView
+        android:id="@+id/dustLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidityLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Dust: " />
+
+    <TextView
+        android:id="@+id/pressureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dustLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Pressure: " />
+
+    <TextView
+        android:id="@+id/pressureLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Vis: " />
+
+    <TextView
+        android:id="@+id/pressureLabel4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureLabel2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Ir: " />
+
+    <TextView
+        android:id="@+id/pressureLabel5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureLabel4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Uv: " />
+
+    <TextView
+        android:id="@+id/lpgLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Lpg: " />
+
+    <TextView
+        android:id="@+id/coLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lpgLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Co: " />
+
+    <TextView
+        android:id="@+id/smokeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Smoke: " />
+
+    <TextView
+        android:id="@+id/co2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/smokeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Co2: " />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/dateLabel"
+        android:layout_toRightOf="@+id/dateLabel"
+        android:text="date" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/latitudeLabel"
+        android:layout_toRightOf="@+id/latitudeLabel"
+        android:text="latitude" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/latitude"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/longitudeLabel"
+        android:layout_toRightOf="@+id/longitudeLabel"
+        android:text="longitude" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/longitude"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tempLabel"
+        android:layout_toRightOf="@+id/tempLabel"
+        android:text="temperature" />
+
+    <TextView
+        android:id="@+id/temperature2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co2"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tempLabel"
+        android:layout_toRightOf="@+id/tempLabel"
+        android:text="temperature" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature2"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/humidityLabel"
+        android:layout_toRightOf="@+id/humidityLabel"
+        android:text="humidity" />
+
+    <TextView
+        android:id="@+id/dust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/dustLabel"
+        android:layout_toRightOf="@+id/dustLabel"
+        android:text="dust" />
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dust"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/pressureLabel"
+        android:layout_toRightOf="@+id/pressureLabel"
+        android:text="pressure" />
+
+    <TextView
+        android:id="@+id/vis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressure"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/pressureLabel2"
+        android:layout_toRightOf="@+id/pressureLabel2"
+        android:text="vis" />
+
+    <TextView
+        android:id="@+id/ir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vis"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/pressureLabel4"
+        android:layout_toRightOf="@+id/pressureLabel4"
+        android:text="ir" />
+
+    <TextView
+        android:id="@+id/uv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ir"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/pressureLabel5"
+        android:layout_toRightOf="@+id/pressureLabel5"
+        android:text="uv" />
+
+    <TextView
+        android:id="@+id/lpg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/lpgLabel"
+        android:layout_toRightOf="@+id/lpgLabel"
+        android:text="lpg" />
+
+    <TextView
+        android:id="@+id/co"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lpg"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/coLabel"
+        android:layout_toRightOf="@+id/coLabel"
+        android:text="co" />
+
+    <TextView
+        android:id="@+id/smoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/co"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/smokeLabel"
+        android:layout_toRightOf="@+id/smokeLabel"
+        android:text="smoke" />
+
+    <TextView
+        android:id="@+id/co2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/smoke"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/co2Label"
+        android:layout_toRightOf="@+id/co2Label"
+        android:text="co2" />
+
+
+</RelativeLayout>
