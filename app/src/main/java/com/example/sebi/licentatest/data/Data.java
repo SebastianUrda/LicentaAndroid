@@ -1,4 +1,4 @@
-package com.example.sebi.licentatest;
+package com.example.sebi.licentatest.data;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;

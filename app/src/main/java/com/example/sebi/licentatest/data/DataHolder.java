@@ -1,8 +1,10 @@
-package com.example.sebi.licentatest;
+package com.example.sebi.licentatest.data;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.sebi.licentatest.R;
 
 public class DataHolder extends RecyclerView.ViewHolder {
     private TextView date;

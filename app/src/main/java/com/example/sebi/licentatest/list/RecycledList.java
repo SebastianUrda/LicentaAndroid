@@ -1,10 +1,15 @@
-package com.example.sebi.licentatest;
+package com.example.sebi.licentatest.list;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import com.example.sebi.licentatest.R;
+import com.example.sebi.licentatest.data.Data;
+import com.example.sebi.licentatest.data.DataList;
+import com.example.sebi.licentatest.data.DataService;
 
 import java.io.IOException;
 import java.util.ArrayList;

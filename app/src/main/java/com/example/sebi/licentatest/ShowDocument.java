@@ -4,31 +4,25 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.io.BufferedWriter;
-import java.io.File;
+import com.example.sebi.licentatest.data.Data;
+import com.example.sebi.licentatest.data.DataList;
+import com.example.sebi.licentatest.data.DataService;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.os.Environment.getExternalStoragePublicDirectory;
 
 public class ShowDocument extends Activity {
     private Button BackBtn;
@@ -65,7 +59,7 @@ public class ShowDocument extends Activity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        DataService  dataService=retrofit.create(DataService.class);
+        DataService dataService=retrofit.create(DataService.class);
         dataService.messages().enqueue(new Callback<DataList>() {
             @Override
             public void onResponse(Call<DataList> call, Response<DataList> response) {
