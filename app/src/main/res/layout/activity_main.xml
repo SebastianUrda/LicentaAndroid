@@ -95,6 +95,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discover" />
 
+    <Button
+        android:id="@+id/answerQuestionnaire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/off"
+        android:layout_marginTop="8dp"
+        android:text="Questionnaire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopService" />
+
     <ListView
         android:id="@+id/devicesListView"
         android:layout_width="364dp"
@@ -110,5 +122,5 @@
         android:choiceMode="singleChoice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stopService" />
+        app:layout_constraintTop_toBottomOf="@+id/answerQuestionnaire" />
 </android.support.constraint.ConstraintLayout>

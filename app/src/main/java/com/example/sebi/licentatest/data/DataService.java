@@ -13,4 +13,5 @@ public interface DataService {
     @POST("data")
     @Headers("Content-type:application/json")
     Call<Void> send(@Body Data model);
+
 }

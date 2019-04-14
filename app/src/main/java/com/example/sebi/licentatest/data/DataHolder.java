@@ -44,7 +44,7 @@ public class DataHolder extends RecyclerView.ViewHolder {
     public void bindViewHolder(Data data)
     {
         date.setText(data.getDate());
-        latitude.setText(data.getLattitude());
+        latitude.setText(data.getLatitude());
         longitude.setText(data.getLongitude());
         temperature.setText(String.valueOf(data.getFrontTemp()));
         lpg.setText(String.valueOf(data.getLpg()));

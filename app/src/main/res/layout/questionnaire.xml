@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/temperature_questions"
+        android:layout_width="166dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dust_questions"
+        android:layout_width="166dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Dust"
+        app:layout_constraintStart_toEndOf="@+id/temperature_questions"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/humidity_questions"
+        android:layout_width="166dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_questions" />
+
+    <Button
+        android:id="@+id/light_questions"
+        android:layout_width="166dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Light"
+        app:layout_constraintStart_toEndOf="@+id/humidity_questions"
+        app:layout_constraintTop_toBottomOf="@+id/dust_questions" />
+</android.support.constraint.ConstraintLayout>

@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 public class Data {
-    @SerializedName("id")
-    private int id;
+    @SerializedName("userId")
+    private int userId;
+    @SerializedName("deviceId")
+    private int deviceId;
     @SerializedName("date")
     private String date;
-    @SerializedName("lattitude")
-    private String lattitude;
+    @SerializedName("latitude")
+    private String latitude;
     @SerializedName("longitude")
     private String longitude;
     @SerializedName("lpg")
@@ -20,8 +22,6 @@ public class Data {
     private double smoke;
     @SerializedName("co2")
     private double co2;
-    @SerializedName("sound")
-    private double sound;
     @SerializedName("backTemp")
     private double backTemp;
     @SerializedName("humidity")
@@ -39,15 +39,37 @@ public class Data {
     @SerializedName("uv")
     private double uv;
 
-    public Data(String date, String lattitude, String longitude, double lpg, double co, double smoke, double co2, double sound, double backTemp, double humidity, double dust, double pressure, double frontTemp, double vis, double ir, double uv) {
+    public Data(String date, String latitude, String longitude, double lpg, double co, double smoke, double co2, double backTemp, double humidity, double dust, double pressure, double frontTemp, double vis, double ir, double uv) {
         this.date = date;
-        this.lattitude = lattitude;
+        this.latitude = latitude;
         this.longitude = longitude;
         this.lpg = lpg;
         this.co = co;
         this.smoke = smoke;
         this.co2 = co2;
-        this.sound = sound;
+        this.backTemp = backTemp;
+        this.humidity = humidity;
+        this.dust = dust;
+        this.pressure = pressure;
+        this.frontTemp = frontTemp;
+        this.vis = vis;
+        this.ir = ir;
+        this.uv = uv;
+    }
+
+    public Data() {
+    }
+
+    public Data(int userId, int deviceId, String date, String latitude, String longitude, double lpg, double co, double smoke, double co2, double backTemp, double humidity, double dust, double pressure, double frontTemp, double vis, double ir, double uv) {
+        this.userId = userId;
+        this.deviceId = deviceId;
+        this.date = date;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.lpg = lpg;
+        this.co = co;
+        this.smoke = smoke;
+        this.co2 = co2;
         this.backTemp = backTemp;
         this.humidity = humidity;
         this.dust = dust;
@@ -66,12 +88,12 @@ public class Data {
         this.date = date;
     }
 
-    public String getLattitude() {
-        return lattitude;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setLattitude(String lattitude) {
-        this.lattitude = lattitude;
+    public void setLatitude(String lattitude) {
+        this.latitude = lattitude;
     }
 
     public String getLongitude() {
@@ -114,13 +136,6 @@ public class Data {
         this.co2 = co2;
     }
 
-    public double getSound() {
-        return sound;
-    }
-
-    public void setSound(double sound) {
-        this.sound = sound;
-    }
 
     public double getBackTemp() {
         return backTemp;
@@ -186,12 +201,20 @@ public class Data {
         this.uv = uv;
     }
 
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(int deviceId) {
+        this.deviceId = deviceId;
     }
 
     public String toJson() {
@@ -199,4 +222,27 @@ public class Data {
         String jo=gson.toJson(this);
         return jo;
        }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "userId=" + userId +
+                ", deviceId=" + deviceId +
+                ", date='" + date + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", lpg=" + lpg +
+                ", co=" + co +
+                ", smoke=" + smoke +
+                ", co2=" + co2 +
+                ", backTemp=" + backTemp +
+                ", humidity=" + humidity +
+                ", dust=" + dust +
+                ", pressure=" + pressure +
+                ", frontTemp=" + frontTemp +
+                ", vis=" + vis +
+                ", ir=" + ir +
+                ", uv=" + uv +
+                '}';
+    }
 }
