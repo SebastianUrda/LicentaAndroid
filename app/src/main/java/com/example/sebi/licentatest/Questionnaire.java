@@ -1,8 +1,11 @@
 package com.example.sebi.licentatest;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -55,5 +58,28 @@ public class Questionnaire extends AppCompatActivity {
                 startActivity(intent);
             }});
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.log_out:
+                SharedPreferences.Editor e=getSharedPreferences("Auth",MODE_PRIVATE).edit();
+
+                e.putString("userId", "").apply();
+                e.putString("userName", "").apply();
+                e.putString("userPassword", "").apply();
+                e.putString("userRole", "").apply();
+                e.putString("loggedIn","false").apply();
+                Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(myIntent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

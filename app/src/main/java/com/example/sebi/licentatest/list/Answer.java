@@ -3,13 +3,15 @@ package com.example.sebi.licentatest.list;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 public class Answer {
     @SerializedName("date")
-    private String date;
+    private Date date;
     @SerializedName("latitude")
-    private String latitude;
+    private Double latitude;
     @SerializedName("longitude")
-    private String longitude;
+    private Double longitude;
     @SerializedName("questionId")
     private int questionId;
     @SerializedName("userId")
@@ -20,7 +22,7 @@ public class Answer {
     public Answer() {
     }
 
-    public Answer(String date, String latitude, String longitude, int questionId, int userId, int answer) {
+    public Answer(Date date, Double latitude, Double longitude, int questionId, int userId, int answer) {
         this.date = date;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -29,28 +31,36 @@ public class Answer {
         this.answer = answer;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
     }
 
     public int getQuestionId() {

@@ -23,7 +23,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.sebi.licentatest.data.Data;
-import com.example.sebi.licentatest.data.DataService;
+import com.example.sebi.licentatest.services.DataService;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -54,6 +54,8 @@ import static com.example.sebi.licentatest.App.CHANNEL_ID;
 
 public class BluetoothService extends IntentService {
     private static final String TAG = "ExampleIntentService";
+    private int userId;
+    private  Retrofit retrofit;
     private static double latitude, longitude;
     private LocationManager locationManager;
     private PowerManager.WakeLock wakeLock;
@@ -114,6 +116,13 @@ public class BluetoothService extends IntentService {
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate");
+        SharedPreferences s=getSharedPreferences("Auth",MODE_PRIVATE);
+        userId=Integer.parseInt(s.getString("userId",""));
+        Log.d("USERID",String.valueOf(userId));
+        retrofit = new Retrofit.Builder()
+                .baseUrl(getString(R.string.server_url))
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
         PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Example:WakeLock");
         wakeLock.acquire();
@@ -126,6 +135,7 @@ public class BluetoothService extends IntentService {
         }
         Notification notification = createNotification("Bluetooth  Service", "Working...");
         startForeground(1, notification);
+
     }
 
     @Override
@@ -223,14 +233,11 @@ public class BluetoothService extends IntentService {
                         }
 
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myRef = database.getReference("Licenta").child("test");
-                        Data data = new Data(1, 1, formattedDate, format.format(latitude), format.format(longitude), lpg, co, smoke, co2, backTemp, humidity, dust, pressure, frontTemp, vis, ir, uv);
+                        DatabaseReference myRef = database.getReference("Licenta").child("new");
+                        Data data = new Data(userId, 1, formattedDate, format.format(latitude), format.format(longitude), lpg, co, smoke, co2, backTemp, humidity, dust, pressure, frontTemp, vis, ir, uv);
                         Log.d("DataToSend", data.toString());
                         myRef.push().setValue(data);
-                        Retrofit retrofit = new Retrofit.Builder()
-                                .baseUrl("http://licenta.ddns.net:8080/mightWork/")
-                                .addConverterFactory(GsonConverterFactory.create())
-                                .build();
+
 
                         createNotification(address, data.toJson());
 

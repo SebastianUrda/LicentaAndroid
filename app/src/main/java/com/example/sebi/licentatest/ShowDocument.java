@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.sebi.licentatest.data.Data;
 import com.example.sebi.licentatest.data.DataList;
-import com.example.sebi.licentatest.data.DataService;
+import com.example.sebi.licentatest.services.DataService;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

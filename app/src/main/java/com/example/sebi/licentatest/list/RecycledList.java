@@ -9,7 +9,7 @@ import android.util.Log;
 import com.example.sebi.licentatest.R;
 import com.example.sebi.licentatest.data.Data;
 import com.example.sebi.licentatest.data.DataList;
-import com.example.sebi.licentatest.data.DataService;
+import com.example.sebi.licentatest.services.DataService;
 
 import java.io.IOException;
 import java.util.ArrayList;

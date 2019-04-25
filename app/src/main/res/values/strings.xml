@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Licenta Test</string>
+    <string name="app_name">PEMS</string>
+    <string name="server_url">http://licenta.ddns.net:8080/mightWork/</string>
 </resources>

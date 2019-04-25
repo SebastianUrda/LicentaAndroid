@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="398dp"
-    android:layout_height="90dp">
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <TextView
@@ -15,18 +15,15 @@
         android:text="TextView"
        />
 
-    <SeekBar
-        android:id="@+id/seek_bar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/discrete1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/question"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:max="9"
-        android:progress="0" />
+        android:layout_marginTop="9dp"
+        app:dsb_max="5"
+        app:dsb_min="-5"
+        app:dsb_value="0"
+        app:dsb_thumbSize="30px" />
 
 </RelativeLayout>
