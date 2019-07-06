@@ -12,8 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
         android:textSize="18sp"
-        android:text="TextView"
-       />
+        android:text="TextView" />
 
     <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
         android:id="@+id/discrete1"

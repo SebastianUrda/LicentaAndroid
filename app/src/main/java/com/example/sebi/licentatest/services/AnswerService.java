@@ -1,6 +1,6 @@
 package com.example.sebi.licentatest.services;
 
-import com.example.sebi.licentatest.list.Answer;
+import com.example.sebi.licentatest.entities.Answer;
 
 import java.util.List;
 

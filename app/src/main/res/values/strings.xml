@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">PEMS</string>
     <string name="server_url">http://licenta.ddns.net:8080/mightWork/</string>
+    <string name="service_started">Service Started</string>
+    <string name="service_stopped">Service Stopped</string>
+    <string name="bluetooth_not_found">Status: Bluetooth not found</string>
+    <string name="bluetooth_enabled">Bluetooth enabled</string>
+    <string name="bluetooth_disabled">Bluetooth disabled</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
 </resources>

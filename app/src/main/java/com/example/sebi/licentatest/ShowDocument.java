@@ -9,8 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.sebi.licentatest.data.Data;
-import com.example.sebi.licentatest.data.DataList;
+import com.example.sebi.licentatest.activities.MainActivity;
+import com.example.sebi.licentatest.entities.Data;
+import com.example.sebi.licentatest.entities.DataList;
 import com.example.sebi.licentatest.services.DataService;
 
 import java.io.FileInputStream;

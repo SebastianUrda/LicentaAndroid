@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "162460066993-uctsufdqc7coimitsidg1aijno4cii72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sebi.licentatest",
+            "certificate_hash": "0508c56de751a3c5b94e34112b3d63bc37d4d05f"
+          }
+        },
+        {
           "client_id": "162460066993-vrlsinh2692fl032vtbbh3omekn2la12.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "162460066993-ophiuguopf6kk2jr3h6pe1lo05vmsj81.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
